@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative; /* Container is positioned relative to itself */
+  width: 400px;
+  height: 300px;
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Hide anything that overflows the container */
+}
+
+.box {
+  position: absolute; /* All boxes are positioned absolutely */
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  line-height: 100px; /* Vertically center the text */
+}
+
+.box1 {
+  top: 20px;
+  left: 20px;
+  background-color: #e74c3c;
+  z-index: 10; /* Box 1 is on top */
+}
+
+.box2 {
+  top: 50px;
+  left: 50px;
+  background-color: #2ecc71;
+  z-index: 5; /* Box 2 is below Box 1 */
+}
+
+.box3 {
+  top: 80px;
+  left: 80px;
+  background-color: #f39c12;
+  z-index: 1; /* Box 3 is below Box 1 and Box 2 */
+}
