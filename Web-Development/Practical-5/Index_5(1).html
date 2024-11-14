@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Practical</title>
+</head>
+<body>
+    <h1>JavaScript Basics Practical</h1>
+    <p id="displayText">This text will change dynamically.</p>
+
+    <!-- JavaScript Code -->
+    <script>
+        // 1. Alert and document manipulation
+        alert("Welcome to the JavaScript Practical!");
+        document.getElementById("displayText").innerText = "Hello, this text has been changed by JavaScript!";
+
+        // 2. Function with conditional logic
+        function greetUser() {
+            const hour = new Date().getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good Morning!";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon!";
+            } else {
+                greeting = "Good Evening!";
+            }
+
+            alert(greeting);
+        }
+
+        greetUser();
+
+        // 3. Array and Loop
+        const names = ["Alice", "Bob", "Charlie", "Daisy"];
+        for (let i = 0; i < names.length; i++) {
+            console.log("Hello, " + names[i] + "!");
+        }
+
+        // 4. Function with array and condition
+        function checkName(name) {
+            if (names.includes(name)) {
+                alert(name + " is on the list!");
+            } else {
+                alert(name + " is not on the list.");
+            }
+        }
+
+        checkName("Alice");
+
+        // 5. Array with loop and condition to display even numbers
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Even numbers:");
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                console.log(numbers[i]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS 3 Practical</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .box:hover {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .orientation {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transform: rotate(45deg);
+    }
+
+    .gradient {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      background-image: linear-gradient(to bottom, #f0f0f0, #ccc);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .radial-gradient {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      background-image: radial-gradient(circle, #f0f0f0, #ccc);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .text-shadow {
+      font-size: 36px;
+      color: #666;
+      text-shadow: 2px 2px 4px #ccc;
+    }
+
+    .box-reflect {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      -webkit-box-reflect: below 10px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2), transparent);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Box with Shadow and Transformation</div>
+  <div class="orientation">Orientation Example</div>
+  <div class="gradient">Linear Gradient Example</div>
+  <div class="radial-gradient">Radial Gradient Example</div>
+  <p class="text-shadow">Text Shadow Example</p>
+  <div class="box-reflect">Box Reflect Example</div>
+</body>
+</html>

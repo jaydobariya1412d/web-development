@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Event Listeners</title>
+  <style>
+    #interactiveBox {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 50px auto;
+      text-align: center;
+      line-height: 200px;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="interactiveBox">Move or Click Me!</div>
+  <p id="output"></p>
+
+  <script>
+    const box = document.getElementById('interactiveBox');
+    const output = document.getElementById('output');
+
+    // Mouse move event
+    box.addEventListener('mousemove', (event) => {
+      output.textContent = `Mouse Position: X ${event.offsetX}, Y ${event.offsetY}`;
+    });
+
+    // Mouse over and out events
+    box.addEventListener('mouseover', () => {
+      box.style.backgroundColor = 'lightgreen';
+      output.textContent = 'Mouse entered the box';
+    });
+
+    box.addEventListener('mouseout', () => {
+      box.style.backgroundColor = 'lightblue';
+      output.textContent = 'Mouse left the box';
+    });
+
+    // Mouse click event
+    box.addEventListener('click', () => {
+      box.textContent = "Box Clicked!";
+      output.textContent = 'You clicked the box!';
+    });
+
+    // Keydown event
+    document.addEventListener('keydown', (event) => {
+      const keyName = event.key;
+      output.textContent = `Key Pressed: ${keyName}`;
+      
+      if (keyName === 'Enter') {
+        output.textContent = 'Enter key was pressed!';
+      } else if (keyName === 'Escape') {
+        output.textContent = 'Escape key was pressed!';
+      }
+    });
+  </script>
+</body>
+</html>

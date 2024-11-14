@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Practical</title>
+</head>
+<body>
+    <h1>Advanced JavaScript Practical</h1>
+    <p id="introText">This is an introduction to DOM manipulation.</p>
+    <div id="userInfo">
+        <p>User Name: <span id="userName"></span></p>
+        <p>User Age: <span id="userAge"></span></p>
+        <p>User Hobbies: <span id="userHobbies"></span></p>
+    </div>
+    <button onclick="updateUser()">Update User Info</button>
+
+    <script>
+        // User object with properties and methods
+        const user = {
+            name: "Alice",
+            age: 25,
+            hobbies: ["Reading", "Traveling", "Coding"],
+            
+            // Method to return user info as a string
+            getInfo: function() {
+                return `${this.name}, Age: ${this.age}, Hobbies: ${this.hobbies.join(", ")}`;
+            }
+        };
+
+        // Display initial user info in the console
+        console.log(user.getInfo());
+
+        // Function to display user info on the web page
+        function displayUserInfo() {
+            document.getElementById("userName").innerHTML = user.name;
+            document.getElementById("userAge").innerHTML = user.age;
+            document.getElementById("userHobbies").innerHTML = user.hobbies.join(", ");
+        }
+
+        // Call displayUserInfo initially to load user data on page load
+        displayUserInfo();
+
+        // Function to update user data and refresh display
+        function updateUser() {
+            // Update user object properties
+            user.name = "Bob";
+            user.age = 30;
+            user.hobbies = ["Hiking", "Photography", "Gardening"];
+
+            // Update DOM elements to reflect new data
+            displayUserInfo();
+            
+            // Update intro text with a new message
+            document.getElementById("introText").innerHTML = "User information has been updated!";
+        }
+    </script>
+</body>
+</html>
